@@ -31,10 +31,10 @@
       </form>
       <hr>
     </div>
-    <div class="d-flex flex-column">
-      <h4 class="align-self-start ps-3">Users List</h4>
-      <h5 v-if="is_loading" class="pt-4 ps-3 text-success">Loading....</h5>
-      <div class="d-flex flex-row pt-5">
+    <div class="d-flex flex-column ps-3">
+      <h4 class="align-self-start ">Users List</h4>
+      <h5 v-if="is_loading" class="pt-1 text-success">Loading....</h5>
+      <div class="d-flex flex-row">
         <table v-if="!is_loading" class="table table-bordered">
           <thead>
           <tr>
