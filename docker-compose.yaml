@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+
+  my-app:
+
+    container_name: kibernum_front
+    build:
+      context: app
+      dockerfile: Dockerfile
+    volumes:
+      - ./app:/app
+      - /app/node_modules
+    ports:
+      - 8081:8080
