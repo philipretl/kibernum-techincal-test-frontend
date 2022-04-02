@@ -1,7 +1,7 @@
 <template>
   <!-- Button trigger modal -->
   <div class="d-flex flex-column p-5 shadow bg-body rounded">
-    <div class="d-flex flex-row justify-content-between align-content-center">
+    <div class="d-flex px-md-5 flex-row justify-content-between align-content-center">
       <h4 class="align-self-start">Users List</h4>
       <button type="button" class="btn btn-primary mb-1" data-bs-toggle="modal" data-bs-target="#exampleModal">
         <BootstrapIcon icon="plus-circle-fill" variant="light"/>
@@ -9,9 +9,9 @@
       </button>
     </div>
 
-    <div class="d-flex flex-row pt-4">
+    <div class="flex-column p-md-5">
       <h5 v-if="is_loading" class="pt-1 text-success">Loading....</h5>
-      <div class="table-responsive-sm">
+      <div class="table-responsive">
         <table v-if="!is_loading" class="table table-bordered shadow p-3 mb-5 bg-body rounded">
           <thead>
           <tr>
