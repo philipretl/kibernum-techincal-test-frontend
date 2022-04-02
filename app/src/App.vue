@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import UsersPage from './components/UsersPage.vue'
+import UsersPage from './pages/UsersPage.vue'
 
 export default {
   name: 'App',
