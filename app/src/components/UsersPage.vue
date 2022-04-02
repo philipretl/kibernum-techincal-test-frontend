@@ -7,7 +7,7 @@
     <div class="d-flex flex-column">
       <hr>
       <div class="alert alert-danger alert-dismissible fade show" v-if="hasErrors" role="alert">
-        <p v-for="error in errors">
+        <p v-for="(error, index) in errors" :key="index">
           {{ error }}
         </p>
         <button type="button" class="btn-close" @click="clearErrors" aria-label="Close"></button>
@@ -61,7 +61,7 @@
           </tr>
           </thead>
           <tbody>
-          <tr v-for="user in users_list ">
+          <tr v-for="(user, index) in users_list " :key="index">
             <td style="width: 5%">{{ user.id }}</td>
             <td style="width: 5%">
               <div class="d-flex flex-row justify-content-start">
