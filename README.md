@@ -8,11 +8,8 @@
 - Requirements =>
     - Docker.
 
-
 - Installation =>
     - docker-compose build && docker-compose up -d
-    - docker exec -it kibernum_front /bin/bash
-    - inside of container =>
-        - composer install
-        - cp .env.example .env
-        - php artisan key:generate
+  
+- Access to Project =>
+    - go to http://localhost:8081
