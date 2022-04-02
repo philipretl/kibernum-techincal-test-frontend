@@ -82,8 +82,9 @@ const users = {
         },
         async saveUserInServer(context, user) {
             context.commit('setSaving', true);
-            await api.registerUser(user);
+            let result = await api.registerUser(user);
             context.commit('setSaving', false);
+            return result;
         },
         clearErrors(context) {
             context.commit('setErrors', []);

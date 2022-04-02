@@ -53,7 +53,7 @@ export default {
                     code: response.status
                 }
             );
-            return;
+            return false;
         }
         if (response.status !== 200) {
             console.log('error != 200')
@@ -62,10 +62,12 @@ export default {
                 response.data.messages,
                 response.status
             );
-            return;
+            return false;
         }
         await store.dispatch(
             'users_module/loadUsersFromServer'
         );
+
+        return true;
     }
 }
