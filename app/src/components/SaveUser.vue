@@ -15,8 +15,10 @@
           <button type="button" class="btn-close" @click="clearErrors" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <div v-if="isImage(avatar_url)" class="d-flex flex-column align-content-center">
-            <img :src="avatar_url"
+          <div class="d-flex flex-column align-content-center">
+            <img v-if="isImage(avatar_url)" :src="avatar_url"
+                 class="rounded-circle align-self-center" alt="Rounded Image" width="200" height="200">
+            <img v-else src="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg"
                  class="rounded-circle align-self-center" alt="Rounded Image" width="200" height="200">
             <p class="text-muted align-self-center pt-2">Avatar preview</p>
           </div>
