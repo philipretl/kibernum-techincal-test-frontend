@@ -15,7 +15,12 @@
           <button type="button" class="btn-close" @click="clearErrors" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <form class="d-flex flex-column align-items-beetwen">
+          <div v-if="isImage(avatar_url)" class="d-flex flex-column align-content-center">
+            <img :src="avatar_url"
+                 class="rounded-circle align-self-center" alt="Rounded Image" width="200" height="200">
+            <p class="text-muted align-self-center pt-2">Avatar preview</p>
+          </div>
+          <form class="d-flex flex-column align-items-between">
             <div class="ps-3">
               <label for="exampleInputEmail1" class="form-label">Name</label>
               <input required v-model="user_name" type="text" class="form-control" id="exampleInputEmail1"
@@ -33,18 +38,6 @@
           <button type="submit" v-if="is_saving" disabled @click.prevent="saveUser" class="btn btn-primary">
             Saving...
           </button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="d-flex flex-column">
-          <hr>
-
-          <hr>
         </div>
       </div>
     </div>
@@ -83,13 +76,16 @@ export default {
         name: this.user_name,
         avatar: this.avatar_url,
       })
-      if(result){
+      if (result) {
         this.user_name = '';
         this.avatar_url = '';
       }
     },
     clearErrors() {
       this.$store.dispatch('users_module/clearErrors');
+    },
+    isImage(url) {
+      return /\.(jpg|jpeg|png|webp|avif|gif|svg)$/.test(url);
     },
   }
 }

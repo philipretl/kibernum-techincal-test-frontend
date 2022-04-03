@@ -29,7 +29,7 @@
         Andres Felipe Vega Noguera
       </p>
       <p class="text-muted ps-md-2">
-        phone: 3012017499
+        phone: +57 3012017499
       </p>
       <p class="text-muted ps-md-2">
         email: afelipe.vega@gmail.com
