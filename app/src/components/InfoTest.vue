@@ -5,14 +5,14 @@
         <img class="img-fluid" src="https://colombia.kibernum.com/wp-content/uploads/2019/10/logo-kibernum-nuevo-servicios-2.png">
       </div>
       <div class="flex-column">
-        <a class="ms-md-2" href="https://github.com/philipretl/kibernum-techincal-test-back" target="__blank">
+        <a class="ms-md-2" href="https://github.com/philipretl/kibernum-techincal-test-back" target="_blank">
           <button class="btn-sm btn-dark m-sm-2">
             Go to backend code
             <BootstrapIcon icon="github" variant="light"/>
           </button>
         </a>
 
-        <a class="ms-md-2" href="https://github.com/philipretl/kibernum-techincal-test-frontend" target="__blank">
+        <a class="ms-md-2" href="https://github.com/philipretl/kibernum-techincal-test-frontend" target="_blank">
           <button class="btn-sm btn-primary">
             Go to frontend code
             <BootstrapIcon icon="github" variant="light"/>
